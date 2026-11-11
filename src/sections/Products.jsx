@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import ProductCard from '../components/ProductCard'
 import { Stagger, StaggerItem } from '../components/motion'
+import { useCanHover } from '../hooks/useCanHover'
 
 const categories = [
   { label: ['All Products'], bg: '#e4d2cb', src: 'cat-all.webp', box: 'left-[6px] top-[23px] h-[51px] w-[86px]' },
@@ -33,6 +34,8 @@ const products = [
 ]
 
 export default function Products() {
+  const canHover = useCanHover()
+
   return (
     <section id="products" className="flex flex-col gap-8 bg-surface px-5 py-14 md:px-10 md:py-[60px] lg:px-[60px]">
       <Stagger
@@ -43,7 +46,7 @@ export default function Products() {
           <StaggerItem key={c.src} className="shrink-0 snap-start">
             <a href="#products" className="group flex flex-col items-center gap-3">
               <motion.span
-                whileHover={{ scale: 1.08, rotate: -4 }}
+                whileHover={canHover ? { scale: 1.08, rotate: -4 } : undefined}
                 transition={{ type: 'spring', stiffness: 300, damping: 15 }}
                 className="relative block size-[98px] overflow-clip rounded-full"
                 style={{ backgroundColor: c.bg }}

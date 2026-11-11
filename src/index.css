@@ -22,12 +22,26 @@
   --breakpoint-3xl: 120rem; /* 1920px — must be rem to sort with the defaults */
 }
 
+/* Hover effects only on desktop: a real pointer that can hover AND at least
+   1024px wide. Mobile and tablet layouts get no hover styles at all.
+   (group-hover / peer-hover build on this variant, so they follow it.) */
+@custom-variant hover {
+  @media (hover: hover) and (min-width: 64rem) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(calc(-50% - 7px)); }
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent; /* no grey flash on tap */
+}
 body {
   @apply font-sans text-title bg-white antialiased;
 }
@@ -46,7 +60,19 @@ body {
   transition: background-size 0.35s ease;
   padding-bottom: 2px;
 }
-.link-underline:hover { background-size: 100% 1px; }
+@media (hover: hover) and (min-width: 64rem) {
+  .link-underline:hover { background-size: 100% 1px; }
+}
+
+/* Press feedback, used only on call-to-action buttons. Works on every
+   device, including touch (it is :active, not :hover). */
+.cta-press {
+  transition-property: transform, color, background-color, border-color;
+  transition-duration: 150ms;
+}
+.cta-press:active {
+  transform: scale(0.97);
+}
 
 /* ---------------------------------------------------------------------------
    Hero image crop. Reproduces the Figma image fill (mirrored, CROP mode) for

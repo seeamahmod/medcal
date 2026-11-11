@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Icon from './Icon'
+import { useCanHover } from '../hooks/useCanHover'
 
 // Card shell from Figma: 445px tall, 8px padding, #e7f1ee, white info panel.
 // `media` is the image area content (positioned absolutely inside a 259px-tall box).
 export default function ProductCard({ category, name, media, price = '$70', oldPrice = '$78' }) {
   const [added, setAdded] = useState(false)
+  const canHover = useCanHover()
 
   const onAdd = () => {
     setAdded(true)
@@ -14,7 +16,7 @@ export default function ProductCard({ category, name, media, price = '$70', oldP
 
   return (
     <motion.article
-      whileHover={{ y: -6 }}
+      whileHover={canHover ? { y: -6 } : undefined}
       transition={{ type: 'spring', stiffness: 300, damping: 22 }}
       className="group flex h-[445px] w-full flex-col justify-end gap-2 rounded-2xl bg-primary-soft p-2 transition-shadow duration-300 hover:shadow-[0_18px_40px_-18px_rgba(14,119,87,0.45)]"
     >

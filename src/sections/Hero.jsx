@@ -1,6 +1,7 @@
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
 import { useState } from 'react'
 import Icon from '../components/Icon'
+import { useCanHover } from '../hooks/useCanHover'
 
 const ease = [0.22, 1, 0.36, 1]
 
@@ -82,7 +83,7 @@ function Navbar() {
           </div>
           <a
             href="#products"
-            className="flex h-12 items-center justify-center rounded-xl border border-white px-7 text-[16px] font-medium leading-none tracking-[-0.24px] text-white capitalize transition-colors duration-300 hover:bg-white hover:text-title"
+            className="cta-press flex h-12 items-center justify-center rounded-xl border border-white px-7 text-[16px] font-medium leading-none tracking-[-0.24px] text-white capitalize transition-colors duration-300 hover:bg-white hover:text-title"
           >
             Get started now
           </a>
@@ -120,7 +121,7 @@ function Navbar() {
               <a
                 href="#products"
                 onClick={() => setOpen(false)}
-                className="mt-4 flex h-12 items-center justify-center rounded-xl bg-white text-[16px] font-medium text-title"
+                className="cta-press mt-4 flex h-12 items-center justify-center rounded-xl bg-white text-[16px] font-medium text-title"
               >
                 Get started now
               </a>
@@ -133,6 +134,8 @@ function Navbar() {
 }
 
 export default function Hero() {
+  const canHover = useCanHover()
+
   return (
     <section
       id="top"
@@ -204,7 +207,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease, delay: 0.95 }}
-            whileHover={{ scale: 1.04 }}
+            whileHover={canHover ? { scale: 1.04 } : undefined}
             whileTap={{ scale: 0.97 }}
             className="flex items-center justify-center rounded-xl bg-white px-6 py-[14px] text-[14px] leading-none text-title"
           >

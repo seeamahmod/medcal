@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Reveal } from '../components/motion'
+import { useCanHover } from '../hooks/useCanHover'
 
 // Real hospital logos (SVG, from Wikimedia Commons). Each logo is fitted into
 // the same bounding box the "logoipsum" placeholders used in Figma, with a
@@ -16,6 +17,8 @@ const hospitals = [
 ]
 
 export default function Hospitals() {
+  const canHover = useCanHover()
+
   return (
     <section id="partners" className="flex flex-col items-center gap-8 bg-surface px-5 py-14 md:px-10 md:py-[60px] lg:px-[60px]">
       <Reveal
@@ -33,7 +36,7 @@ export default function Hospitals() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ y: -4 }}
+            whileHover={canHover ? { y: -4 } : undefined}
             className="group flex h-[80px] items-center justify-center overflow-clip rounded-2xl bg-white px-4 transition-shadow duration-300 hover:shadow-[0_12px_30px_-14px_rgba(6,50,37,0.25)] md:h-[98px] md:px-6"
           >
             <img

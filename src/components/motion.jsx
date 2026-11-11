@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const ease = [0.22, 1, 0.36, 1]
 
+
 // Fades + slides children up when they scroll into view.
 export function Reveal({ children, delay = 0, y = 32, className = '', as = 'div', ...rest }) {
   const Comp = motion[as]

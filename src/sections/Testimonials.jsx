@@ -60,7 +60,7 @@ export default function Testimonials() {
         <Reveal delay={0.1}>
           <a
             href="#testimonials"
-            className="flex items-center justify-center rounded-xl border border-[#e1e1e1] px-6 py-[17px] text-[16px] leading-none text-title transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-white"
+            className="cta-press flex items-center justify-center rounded-xl border border-[#e1e1e1] px-6 py-[17px] text-[16px] leading-none text-title transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-white"
           >
             See all testimonials
           </a>
