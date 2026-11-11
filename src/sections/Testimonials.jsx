@@ -67,8 +67,8 @@ export default function Testimonials() {
         </Reveal>
       </div>
 
-      <Reveal className="group flex pl-5 md:pl-10 lg:pl-[60px]">
-        <div className="flex w-max animate-marquee gap-[14px] group-hover:[animation-play-state:paused]">
+      <Reveal className="flex pl-5 md:pl-10 lg:pl-[60px]">
+        <div className="flex w-max animate-marquee gap-[14px]">
           {loop.map((r, i) => (
             <Card key={i} r={r} hidden={i >= reviews.length} />
           ))}

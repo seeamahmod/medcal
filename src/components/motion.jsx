@@ -62,7 +62,7 @@ export function CountUp({ value }) {
   useEffect(() => {
     if (!inView) return
     const controls = animate(0, target, {
-      duration: 1.6,
+      duration: 0.9,
       ease: 'easeOut',
       onUpdate: (v) => setN(Math.round(v)),
     })

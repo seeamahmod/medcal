@@ -17,7 +17,7 @@ A responsive, animated landing page for **MedCal**, a modern pharmacy. It's buil
   - Stats count up when they come into view
   - Product cards lift on hover, product images zoom, and "Add to cart" gives feedback
   - Live countdown timer with flip-style digits
-  - Testimonial marquee that loops forever and pauses on hover
+  - Testimonial marquee that loops forever without stopping
   - Navbar turns into a blurred bar once you scroll
   - Respects `prefers-reduced-motion`
 
