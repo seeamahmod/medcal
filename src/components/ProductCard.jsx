@@ -56,8 +56,8 @@ export default function ProductCard({ category, name, media, price = '$70', oldP
           onClick={onAdd}
           className="relative flex w-full items-center justify-center gap-1 overflow-hidden rounded-lg bg-primary px-[18px] py-3 text-white transition-colors duration-300 hover:bg-primary-hover"
         >
-          <Icon name="cart-plus" size={16} />
-          <span className="text-[12px] leading-none">{added ? 'Added!' : 'Add to cart'}</span>
+          <Icon name="cart-plus" size={18} />
+          <span className="text-[16px] leading-none">{added ? 'Added!' : 'Add to cart'}</span>
         </motion.button>
       </div>
     </motion.article>
