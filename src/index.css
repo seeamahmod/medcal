@@ -104,3 +104,14 @@ body {
     top: calc(100cqw * -0.050688);
   }
 }
+
+/* Compact layouts (hamburger-menu widths): hide the page scrollbar but keep
+   scrolling by touch, wheel and keyboard. */
+@media (max-width: 1023.98px) {
+  html {
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}
