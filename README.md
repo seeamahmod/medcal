@@ -86,3 +86,7 @@ npx vercel --prod
 - Design: **Seeam Ahmod**, from the MedCal Figma file
 - Icons: [Nucleo](https://nucleoapp.com)
 - Hospital logos are trademarks of their respective owners and appear here only to demonstrate the design. They don't imply any affiliation or endorsement. Logo files come from Wikimedia Commons.
+
+## License
+
+Copyright (c) 2026 Seeam Ahmod. All rights reserved. See [LICENSE](LICENSE).
