@@ -78,7 +78,7 @@ export default function HotOffer() {
           className="absolute inset-0 overflow-hidden"
         >
           <img
-            src="/assets/hot-offer.png"
+            src="/assets/hot-offer.webp"
             alt="Real Roots Runder Milt supplement bottle with capsules"
             loading="lazy"
             className="absolute top-[-16.89%] left-[-24.43%] h-[133.77%] w-[148.85%] max-w-none"

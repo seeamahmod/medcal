@@ -158,7 +158,7 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster="/assets/hero-poster.png"
+        poster="/assets/hero-poster.webp"
         aria-hidden="true"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}

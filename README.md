@@ -2,7 +2,7 @@
 
 A responsive, animated landing page for **MedCal**, a modern pharmacy. It's built in React and Tailwind CSS from the MedCal Figma design, and matches the 1440px artboard pixel for pixel.
 
-![MedCal hero](public/assets/hero-poster.png)
+![MedCal hero](public/assets/hero-poster.webp)
 
 ## Features
 
@@ -75,7 +75,7 @@ src/
 
 ## Hero video
 
-The hero plays `public/assets/hero.mp4` (and `hero.webm` if present). The video is always **muted**, which browsers require for autoplay. If neither file is there, the poster image (`hero-poster.png`) shows instead.
+The hero plays `public/assets/hero.mp4` (and `hero.webm` if present). The video is always **muted**, which browsers require for autoplay. If neither file is there, the poster image (`hero-poster.webp`) shows instead.
 
 To replace the video, drop a new `hero.mp4` (H.264, ideally under 8 MB, 1920×1080) into `public/assets/`, then commit and push. Vercel redeploys on its own.
 

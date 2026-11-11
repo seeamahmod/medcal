@@ -23,10 +23,10 @@ const products = [
           </div>
         </div>
         <div className="absolute top-[60px] h-[143px] w-[86px]" style={{ left: 'calc(50% + 30px)', translate: '-50% 0' }}>
-          <Crop src="/assets/trend-1.png" className="top-[-31.65%] left-[-81.89%] h-[157.73%] w-[263.79%]" />
+          <Crop src="/assets/trend-1.webp" className="top-[-31.65%] left-[-81.89%] h-[157.73%] w-[263.79%]" />
         </div>
         <div className="absolute top-[37px] h-[189px] w-[113px]" style={{ left: 'calc(50% - 15.5px)', translate: '-50% 0' }}>
-          <Crop src="/assets/trend-1.png" className="top-[-31.65%] left-[-81.89%] h-[157.73%] w-[263.79%]" />
+          <Crop src="/assets/trend-1.webp" className="top-[-31.65%] left-[-81.89%] h-[157.73%] w-[263.79%]" />
         </div>
       </>
     ),
@@ -41,7 +41,7 @@ const products = [
       >
         <div className="flex-none rotate-[20.77deg]">
           <div className="relative h-[216.432px] w-[89.907px]">
-            <Crop src="/assets/trend-2.png" className="top-[-22.51%] left-[-124.55%] h-[145.02%] w-[349.09%]" />
+            <Crop src="/assets/trend-2.webp" className="top-[-22.51%] left-[-124.55%] h-[145.02%] w-[349.09%]" />
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ const products = [
     name: 'Vasodilate Plus',
     media: (
       <div className="absolute top-1/2 h-[195px] w-[107px] -translate-x-1/2 -translate-y-1/2" style={{ left: 'calc(50% - 0.5px)' }}>
-        <Crop src="/assets/trend-3.png" className="top-0 left-[-82.34%] h-full w-[267.66%]" />
+        <Crop src="/assets/trend-3.webp" className="top-0 left-[-82.34%] h-full w-[267.66%]" />
       </div>
     ),
   },
@@ -61,7 +61,7 @@ const products = [
     name: 'BloodFlow Booster',
     media: (
       <div className="absolute top-1/2 size-[195px] -translate-x-1/2 -translate-y-1/2" style={{ left: 'calc(50% - 0.5px)' }}>
-        <img src="/assets/trend-4.png" alt="" className="absolute inset-0 size-full max-w-none object-cover" />
+        <img src="/assets/trend-4.webp" alt="" className="absolute inset-0 size-full max-w-none object-cover" />
       </div>
     ),
   },

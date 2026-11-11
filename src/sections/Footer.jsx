@@ -7,11 +7,11 @@ const columns = [
 ]
 
 const payments = [
-  { src: 'pay-visa.png', alt: 'Visa', box: 'h-[18px] w-[44px]' },
+  { src: 'pay-visa.webp', alt: 'Visa', box: 'h-[18px] w-[44px]' },
   { src: 'pay-mastercard.png', alt: 'Mastercard', box: 'h-[18px] w-[30px]' },
   { src: 'pay-amex.png', alt: 'American Express', box: 'h-[21px] w-[34px] rounded-[2px]', style: { top: 'calc(50% + 0.5px)' } },
-  { src: 'pay-discover.png', alt: 'Discover', box: 'h-[23px] w-[41px]', style: { left: 'calc(50% - 0.5px)', top: 'calc(50% + 0.5px)' } },
-  { src: 'pay-visa.png', alt: 'Visa', box: 'h-[18px] w-[44px]' },
+  { src: 'pay-discover.webp', alt: 'Discover', box: 'h-[23px] w-[41px]', style: { left: 'calc(50% - 0.5px)', top: 'calc(50% + 0.5px)' } },
+  { src: 'pay-visa.webp', alt: 'Visa', box: 'h-[18px] w-[44px]' },
   { src: 'pay-paypal.png', alt: 'PayPal', box: 'h-[22px] w-[44px]' },
 ]
 

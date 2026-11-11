@@ -54,7 +54,7 @@ export default function Offers() {
         <div className={`absolute top-[60px] right-[-30px] h-[380px] w-[257px] rounded-[20px] md:top-[36px] md:right-[46px] md:h-[494px] md:w-[334px] ${floatHover}`}>
           <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[20px]">
             <img
-              src="/assets/offer-garlic.png"
+              src="/assets/offer-garlic.webp"
               alt="Hand holding a bottle of black garlic oil"
               className="absolute top-[-15.33%] left-[-1.15%] h-[117.71%] w-[115.86%] max-w-none"
             />
@@ -77,7 +77,7 @@ export default function Offers() {
           </div>
           <div className={`absolute right-[106px] h-[172px] w-[68px] -translate-y-1/2 ${floatHover}`} style={{ top: 'calc(50% - 2.25px)' }}>
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
-              <img src="/assets/offer-sanitizer.png" alt="" className="absolute top-[-11.69%] left-[-117.79%] h-[132.1%] w-[335.57%] max-w-none" />
+              <img src="/assets/offer-sanitizer.webp" alt="" className="absolute top-[-11.69%] left-[-117.79%] h-[132.1%] w-[335.57%] max-w-none" />
             </div>
           </div>
           </div>
@@ -90,7 +90,7 @@ export default function Offers() {
             <div className={`absolute right-[60px] h-[202px] w-[80px] -translate-y-1/2 ${floatHover}`} style={{ top: 'calc(50% - 2.25px)' }}>
               <div className="absolute inset-0 overflow-hidden">
                 <img
-                  src="/assets/offer-sanitizer.png"
+                  src="/assets/offer-sanitizer.webp"
                   alt="Hand sanitizer bottles"
                   className="absolute top-[-11.69%] left-[-117.79%] h-[132.1%] w-[335.57%] max-w-none"
                 />
@@ -121,7 +121,7 @@ export default function Offers() {
             <div className={`absolute top-[20px] right-[62px] h-[190px] w-[132px] ${floatHover}`}>
               <div className="absolute inset-0 overflow-hidden">
                 <img
-                  src="/assets/offer-lotion.png"
+                  src="/assets/offer-lotion.webp"
                   alt="Sunscreen body lotion bottles"
                   className="absolute top-[-12.66%] left-[-38.83%] h-[122.97%] w-[177.65%] max-w-none"
                 />
