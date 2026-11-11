@@ -89,4 +89,4 @@ npx vercel --prod
 
 ## License
 
-Copyright (c) 2026 Seeam Ahmod. All rights reserved. See [LICENSE](LICENSE).
+Released under the [MIT License](LICENSE). Copyright (c) 2026 Seeam Ahmod. You may reuse this code, but keep the copyright notice and credit the author.
