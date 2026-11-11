@@ -60,7 +60,7 @@ src/
     ProductCard.jsx       shared product card
     motion.jsx            Reveal / Stagger / CountUp animation helpers
   sections/
-    Hero.jsx              navbar + video hero
+    Hero.jsx              navbar + hero
     About.jsx             intro + stats
     Trending.jsx          trending products
     Hospitals.jsx         partner hospital logos
