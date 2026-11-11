@@ -2,17 +2,17 @@
 
 A responsive, animated landing page for **MedCal**, a modern pharmacy. It's built in React and Tailwind CSS from the MedCal Figma design, and matches the 1440px artboard pixel for pixel.
 
-![MedCal hero](public/assets/hero-poster.webp)
+![MedCal hero](public/assets/hero.webp)
 
 ## Features
 
 - **Matches the Figma design.** Spacing, type, colors and image crops come from the Figma file. Every section lines up with the 1440px artboard (section offsets match to the pixel).
 - **Fully responsive.** It works from 320px phones up to 1920px+ desktops, with a hamburger menu on mobile, stacked grids and a category row you can swipe.
-- **Hero video.** A full-bleed background video that autoplays muted and loops, with `playsInline` so it also plays on iOS. A poster image shows first so the hero never looks empty.
+- **Hero image.** A full-bleed hero photo with the same crop and horizontal flip as the Figma design, plus the same radial vignette.
 - **Nucleo icons.** Every icon is a [Nucleo](https://nucleoapp.com) *core / outline* icon. The same icons were swapped into the Figma file so design and code stay in sync.
 - **Real partner logos.** The "Collaborated with 20+ hospitals" grid uses real hospital logos (SVG). Each one is sized to fit its card.
 - **Animations** (Framer Motion + CSS):
-  - Staggered headline reveal and a slow zoom on the hero video
+  - Staggered headline reveal and a slow zoom on the hero image
   - Sections fade up as you scroll into them
   - Stats count up when they come into view
   - Product cards lift on hover, product images zoom, and "Add to cart" gives feedback
@@ -52,7 +52,7 @@ npm run lint       # oxlint
 ## Project structure
 
 ```
-public/assets/            images, SVGs, hero video + poster
+public/assets/            images and SVGs
   hospitals/              partner hospital logos (SVG)
 src/
   components/
@@ -72,12 +72,6 @@ src/
   App.jsx
   index.css               Tailwind + design tokens
 ```
-
-## Hero video
-
-The hero plays `public/assets/hero.mp4` (and `hero.webm` if present). The video is always **muted**, which browsers require for autoplay. If neither file is there, the poster image (`hero-poster.webp`) shows instead.
-
-To replace the video, drop a new `hero.mp4` (H.264, ideally under 8 MB, 1920×1080) into `public/assets/`, then commit and push. Vercel redeploys on its own.
 
 ## Deployment
 

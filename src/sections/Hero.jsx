@@ -1,5 +1,5 @@
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import Icon from '../components/Icon'
 
 const ease = [0.22, 1, 0.36, 1]
@@ -132,41 +132,33 @@ function Navbar() {
   )
 }
 
+// Figma image fill is cropped and mirrored horizontally (imageTransform
+// [[-0.927, 0, 0.964], [0, 0.785, 0.030]]). Between 1024px and 1919px the
+// exact crop is reproduced; other widths fall back to object-cover.
+const exactCrop =
+  'lg:max-[1919px]:inset-auto lg:max-[1919px]:left-[-3.89%] lg:max-[1919px]:top-[-3.77%] lg:max-[1919px]:h-[127.35%] lg:max-[1919px]:w-[107.85%] lg:max-[1919px]:object-fill'
+
 export default function Hero() {
-  const videoRef = useRef(null)
-
-  // Ensure the video is muted before play() so every browser allows autoplay.
-  useEffect(() => {
-    const v = videoRef.current
-    if (!v) return
-    v.muted = true
-    v.defaultMuted = true
-    const p = v.play()
-    if (p && p.catch) p.catch(() => {})
-  }, [])
-
   return (
     <section
       id="top"
       className="relative flex h-[640px] items-end overflow-hidden p-5 pb-12 md:h-[720px] md:p-10 lg:h-[783px] lg:p-[60px] min-[1920px]:h-[844px]"
     >
-      <motion.video
-        ref={videoRef}
-        className="absolute inset-0 size-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/assets/hero-poster.webp"
-        aria-hidden="true"
+      <motion.div
+        className="absolute inset-0"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
         transition={{ duration: 2.2, ease }}
       >
-        <source src="/assets/hero.webm" type="video/webm" />
-        <source src="/assets/hero.mp4" type="video/mp4" />
-      </motion.video>
+        <img
+          src="/assets/hero.webp"
+          alt="Pharmacist helping a customer review her prescription on a tablet"
+          width="1536"
+          height="1024"
+          fetchPriority="high"
+          className={`absolute inset-0 size-full max-w-none -scale-x-100 object-cover object-[45%_center] ${exactCrop}`}
+        />
+      </motion.div>
       {/* Figma: radial gradient (transparent → black) at 35% */}
       <div
         className="pointer-events-none absolute inset-0 opacity-35"
