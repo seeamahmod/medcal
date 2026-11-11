@@ -17,6 +17,9 @@
   --color-surface: #fafafa;
 
   --animate-marquee: marquee 40s linear infinite;
+
+  /* Figma's large artboard */
+  --breakpoint-3xl: 120rem; /* 1920px — must be rem to sort with the defaults */
 }
 
 @keyframes marquee {
@@ -44,3 +47,60 @@ body {
   padding-bottom: 2px;
 }
 .link-underline:hover { background-size: 100% 1px; }
+
+/* ---------------------------------------------------------------------------
+   Hero image crop. Reproduces the Figma image fill (mirrored, CROP mode) for
+   each artboard and blends between them. 100cqw = hero section width.
+     1200 frame: 1538.0 x 1025.3 @ (-211.7, -41.3)   section 783px tall
+     1440 frame: 1553.0 x  997.1 @ ( -56.0, -29.5)   section 783px tall
+     1920 frame: 1956.3 x 1304.2 @ ( -18.6, -97.3)   section 844px tall
+   Below 1024px the hero is shorter, so the crop is driven by its height and
+   centred on the same point of the photo as the 1200 frame.
+   ------------------------------------------------------------------------ */
+.hero-img {
+  position: absolute;
+  max-width: none;
+  object-fit: fill;
+  scale: -1 1; /* Figma fill is flipped horizontally */
+  /* phones: section 640px tall */
+  height: 838.4px;
+  width: 1257.6px;
+  top: -33.8px;
+  left: calc(50cqw - 664px);
+}
+@media (min-width: 768px) {
+  /* tablets: section 720px tall */
+  .hero-img {
+    height: 943.2px;
+    width: 1414.8px;
+    top: -38px;
+    left: calc(50cqw - 747px);
+  }
+}
+@media (min-width: 1024px) {
+  /* 1024–1439: 1200 frame, interpolated toward the 1440 frame */
+  .hero-img {
+    width: calc(1538px + (100cqw - 1200px) * 0.06254);
+    height: calc(1025.33px - (100cqw - 1200px) * 0.1175);
+    left: calc(-211.71px + (100cqw - 1200px) * 0.64875);
+    top: calc(-41.32px + (100cqw - 1200px) * 0.04908);
+  }
+}
+@media (min-width: 1440px) {
+  /* 1440–1919: 1440 frame, interpolated toward the 1920 frame */
+  .hero-img {
+    width: calc(1553.01px + (100cqw - 1440px) * 0.84025);
+    height: calc(997.13px + (100cqw - 1440px) * 0.63975);
+    left: calc(-56.01px + (100cqw - 1440px) * 0.077917);
+    top: calc(-29.54px - (100cqw - 1440px) * 0.141208);
+  }
+}
+@media (min-width: 1920px) {
+  /* 1920 frame, scaled proportionally on wider screens */
+  .hero-img {
+    width: calc(100cqw * 1.018923);
+    height: calc(100cqw * 0.679282);
+    left: calc(100cqw * -0.009693);
+    top: calc(100cqw * -0.050688);
+  }
+}
